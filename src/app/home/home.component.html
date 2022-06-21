@@ -1,0 +1,43 @@
+<div class="containerHome">
+ <a href="/add-item"> <button (click)="addItem()" class="btn btn-dark" > + </button></a>
+      <div class="row" id="item-card">
+      <div  class="col-3" *ngFor=" let item of items">
+        <!-- <div>
+          <span>
+              image
+          </span>
+          <input type="text" [(ngModel)]="item.image">
+      </div>
+      <div>
+        <span>
+            title
+        </span>
+        <input type="number" [(ngModel)]="item.price">
+    </div>
+          <div>
+              <span>
+                  price
+              </span>
+              <input type="text" [(ngModel)]="item.title">
+          </div>
+          <div>
+              <span>
+                  description
+              </span>
+              <input type="text" [(ngModel)]="item.description">
+          </div>
+   -->
+
+
+<div class="card items-card"  style="width: 18rem;">
+    <img src= {{item.image}} class="card-img-top" alt="mypicture" >
+    <div class="card-body">
+        <h3 class="item-price"> {{item.price}} US$ </h3>
+      <h5 class="card-title item-name">{{item.title}}</h5>
+      <p class="card-text item-description"> {{item.description}} </p>
+      <a class="btn btn-warning  " (click)="deleteItem($event)">Delete</a>
+    </div>
+  </div>
+      </div>
+      </div>
+</div> 
